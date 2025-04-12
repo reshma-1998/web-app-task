@@ -1,0 +1,1697 @@
+None selected 
+
+Skip to content
+Using Gmail with screen readers
+1 of 5,765
+Test Web index
+Inbox
+Web Developer <web.developer@kaycomm.in>
+Attachments
+5:26 PM (31 minutes ago)
+to me
+
+Be careful with this message.
+This message contains one or more attachments that can't be verified as safe. Avoid downloading them unless you know the sender and are confident that this email is legitimate.
+
+Report spamLooks safe
+Please find the test index file attached
+ One attachment
+  •  Scanned by Gmail
+Downloading this attachment is disabled. If you want to download it and you trust this message, click "Looks safe" in the banner above.
+Thanks, I have received it.Received, thank you.Thanks a lot.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Estate Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--<link rel="stylesheet" href="styles.css">-->
+  <!-- Bootstrap Icons CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<!-- Import Libre Baskerville font from Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<!-- Import Source Sans Pro font from Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      /*background-color: #E6E8EB;*/
+      
+    }
+
+
+/* AFTER scroll styles (can be applied via JS on scroll if needed) */
+.navbar.scrolled {
+  background-color: #fff !important;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+
+  
+    .section-spacing {
+  margin-top: 40px;    /* Adjust top margin */
+  margin-bottom: 40px; /* Adjust bottom margin */
+  padding-top: 20px;   /* Optional: Adjust top padding */
+  padding-bottom: 20px;/* Optional: Adjust bottom padding */
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+  /*padding-left: 25px;*/
+  /*padding-right: 25px;*/
+ 
+  
+            
+    }
+
+
+/* For smaller screens (e.g., mobile), you can adjust spacing if needed */
+@media (max-width: 768px) {
+  .section-spacing {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 15px;
+  
+  }
+  
+@media (min-width: 768px) {
+  .section-spacing {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+}
+    
+    /* Apply Libre Baskerville to all heading tags */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Libre Baskerville', serif;
+  
+}
+span, p {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Default font size for all headings (larger screens) */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 35px; /* Default font size */
+}
+
+/* For medium screens (Tablets) */
+@media (max-width: 1024px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 26px; /* Adjust font size for tablets */
+  }
+}
+
+/* For small screens (Mobile devices) */
+@media (max-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 24px; /* Adjust font size for smaller mobile screens */
+  }
+}
+
+/* For very small screens (Phones in portrait mode) */
+@media (max-width: 480px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 18px; /* Adjust font size for very small mobile screens */
+  }
+}
+
+    
+    header {
+      background: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    .logo {
+      font-weight: bold;
+      color: #031439;
+      font-size: 18px;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-size: 15px;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #031439;
+    }
+    .phone-btn {
+      background-color: #031439;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    /*.phone-btn::before {*/
+    /*  content: '\260E';*/
+    /*  font-size: 16px;*/
+    /*}*/
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      color: #031439;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+      nav.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+    h2 {
+      color: #031439;
+      font-weight: bold;
+    }
+    .about-section, .highlight-section, .amenities-section, .floorplan-section {
+      background: none;
+      padding: 40px 20px;
+      margin-bottom: 30px;
+    }
+    .read-more {
+      color: #031439;
+      cursor: pointer;
+    }
+    
+    
+    
+    }
+/*.navbar-toggler-icon {*/
+/*    display: inline-block;*/
+/*    width: 1.5em;*/
+/*    height: 1.5em;*/
+/*    vertical-align: middle;*/
+/*    background-image: var(--bs-navbar-toggler-icon-bg);*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center;*/
+/*    background-size: 100%;*/
+/*}*/
+
+       
+.highlight-section {
+  background-color: #e6ebef;
+  padding: 80px 20px;
+}
+
+.highlight-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 147px;
+}
+
+.highlight-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+
+
+/*.highlight-left h2 {*/
+/*  color: #031439;*/
+/*  font-size: 36px;*/
+  
+  
+/*}*/
+
+.highlight-image img {
+  width: 100%;
+  height: 60vh;
+  max-width: 600px;
+  border-radius:50px 0 50px 0;
+  /*box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);*/
+}
+
+.highlight-img {
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.2); /* X: right, Y: bottom, blur */
+  border-radius: 6px; /* Optional: smooth edges */
+}
+
+.highlight-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.highlight-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.highlight-right li {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #031439;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  
+}
+
+.highlight-right li span {
+  font-size: 30px;
+  font-weight: bold;
+  color: #031439;
+  
+  min-width: 70px;
+}
+  .floor-plan-section {
+      padding: 60px 20px;
+    }
+
+    .floor-plan-card {
+      background-color: #E6E8EB;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    }
+
+    .bhk-buttons .btn {
+      border-radius: 50px;
+      font-size: 0.9rem;
+      padding: 6px 16px;
+      margin-right: 10px;
+      font-weight: 500;
+      border: 1px solid #0a1d3b;
+      color: #0a1d3b;
+      background-color: transparent;
+    }
+
+    .bhk-buttons .btn.active {
+      background-color: #0a1d3b;
+      color: #fff;
+      border: none;
+    }
+
+    .floor-plan-details h5 {
+      font-weight: 600;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+
+    .floor-plan-details p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .btn-download {
+      margin-top: 30px;
+      border-radius: 30px;
+      padding: 10px 28px;
+      background-color: #0a1d3b;
+      color: #fff;
+      font-weight: 500;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: none;
+    }
+
+    .plan-img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 992px) {
+      .floor-plan-card {
+        padding: 30px 20px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+  .plan-img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .floor-plan-card {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .floor-plan-details {
+    text-align: center;
+  }
+
+  .bhk-buttons {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+    
+ .gallery-container {
+      
+      /*background-color: #E6E8EB;*/
+      padding: 3rem 1rem;
+      position: relative;
+    }
+
+    .slider-wrapper {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slide-group {
+      display: flex;
+      transition: transform 0.5s ease;
+      width: 100%;
+    }
+
+    .slide {
+      display: flex;
+      flex: 0 0 100%;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .image-card {
+      flex: 1 1 0;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .image-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    }
+
+    .image-title {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.9);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      z-index: 10;
+    }
+
+    .nav-button:hover {
+      background-color: #fff;
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .nav-prev {
+      left: -10px;
+    }
+
+    .nav-next {
+      right: -10px;
+    }
+
+    .dot-indicators {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #dee2e6;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .dot.active {
+      width: 20px;
+      border-radius: 5px;
+      background-color: #212529;
+    }
+
+    /* Mobile View */
+    @media (max-width: 768px) {
+      .slide {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+
+      .image-card {
+        flex: 0 0 100%;
+      }
+
+      .slide-group {
+        flex-wrap: nowrap;
+      }
+
+      .nav-prev {
+        left: -10px;
+      }
+
+      .nav-next {
+        right: -10px;
+      }
+    }
+  
+
+  .section-container {
+      padding: 5rem 0;
+      background-color: #fff;
+    }
+
+    .section-title {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #0a2540;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-description {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #4a5568;
+    }
+
+    .read-more {
+      color: #0a2540;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .read-more:hover {
+      text-decoration: underline;
+    }
+
+    .contact-section {
+      background-color: #fff;
+      padding: 5rem 0;
+    }
+
+    .contact-description {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #4a5568;
+      margin-bottom: 2rem;
+    }
+
+    .contact-form {
+      background-color: #E6E8EB;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+/* Custom input box style with bottom border using #031439 color */
+.custom-input {
+  border: none;                    /* Remove default border */
+  border-bottom: 1px solid #a5a6b2 !important; /* Use #031439 color for the bottom border */
+  padding: 8px 12px;                /* Padding for the input */
+  font-size: 16px;                  /* Adjust font size as needed */
+  width: 100%;                      /* Ensure input box takes full width (optional) */
+  outline: none;                    /* Remove outline on focus */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+    background-color: transparent;
+}
+
+/* Focus effect: Change bottom border color when the input is focused */
+.custom-input:focus {
+      background-color: transparent;
+  border-bottom: 1px solid #a5a6b2;  /* Keep #031439 color on focus */
+}
+
+/* Optional: Apply styling when input is empty and not focused */
+.custom-input:placeholder-shown {
+  border-bottom: 2px solid #6c7d99;  /* Lighter bottom border when no input (lighter shade of #031439) */
+  background-color: transparent;
+    
+}
+
+
+
+    .form-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0a2540;
+      margin-bottom: 2rem;
+    }
+
+    .form-control {
+      padding: 0.75rem 1rem;
+      border: 1px solid #e2e8f0;
+      /*border-radius: 0.5rem;*/
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+    .form-control:focus {
+      border-color: #0a2540;
+      box-shadow: 0 0 0 3px rgba(10, 37, 64, 0.1);
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+      background-color: #0a2540;
+      border: none;
+      /*border-radius: 0.5rem;*/
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #1a365d;
+    }
+
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      .form-title {
+        font-size: 1.5rem;
+      }
+
+      .contact-form {
+        padding: 2rem;
+      }
+    }
+    
+     .footer-wrapper {
+      background-color: #E6E8EB;
+      padding-bottom: 0px!important;
+       margin-bottom: 0;
+        
+     
+    }
+
+    .footer-top {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-logo-box {
+      flex: 1 1 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      font-weight: 600;
+      color: #031439;
+    }
+
+    .footer-logo-box img {
+      width: 100px;
+      height: auto;
+      margin-top: 10px;
+    }
+
+    .footer-disclaimer {
+      flex: 1 1 70%;
+      color: #031439;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .footer-bottom {
+      background-color: #031439;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-links a:not(:last-child)::after {
+      content: '|';
+      margin-left: 10px;
+      color: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+      .footer-top {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-disclaimer {
+        text-align: justify;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+    }
+    
+    
+ /* Add these styles for flexbox layout */
+header .container {
+  display: flex;
+  justify-content: space-between; /* Equal space between logo and menu */
+  align-items: center; /* Vertically center the items */
+  padding: 0 20px; /* Optional: Adds some padding on both sides */
+}
+
+header .logo {
+  flex: 1;
+}
+
+/*header #navbar {*/
+/*  display: flex;*/
+  gap: 20px; /* Adjust gap as needed */
+/*}*/
+
+/*header #navbar a {*/
+/*  text-decoration: none;*/
+   color: #031439; /* Or any color that matches your design */
+/*}*/
+
+/* Optional: Adjust phone button position */
+header .phone-btn {
+  margin-left: 20px;
+  color: white !important;
+}
+
+
+
+   .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+
+    .location-container {
+      display: flex;
+      flex-direction: column;
+      /*align-items: center;*/
+      justify-content: center;
+    }
+
+    .map-wrapper {
+      position: relative;
+      max-width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .map-image {
+      width: 100%;
+      display: block;
+    }
+
+    .info-panel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 320px;
+      height: 100%;
+      background-color: rgb(28 20 20 / 90%);
+      color: #fff;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .accordion {
+      width: 100%;
+       font-family: 'Source Sans Pro', sans-serif;
+      
+    }
+
+    .accordion-item {
+      background: ;: 1px solid rgba(255, 255, 255, 0.2) !important;
+      color: white;
+    }
+    
+    .accordion {
+    --bs-accordion-bg: transparent !important;
+    --bs-accordion-border-color: transparent !important;
+    }
+    
+    .accordion-header {
+      font-size: 16px;
+      padding: 10px 0;
+      cursor: pointer;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+       border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .accordion-content ul {
+      list-style: none;
+      padding-left: 12px;
+         background: ;: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .accordion-content li {
+      font-size: 14px;
+      line-height: 1.6;
+      position: relative;
+        background: ;: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .accordion-content li::before {
+      content: '•';
+      color: #fff;
+      position: absolute;
+      left: -12px;
+        background: ;: 1px solid rgba(255, 255, 255, 0.2) !important;
+        
+    }
+
+    .accordion-item.active .accordion-content {
+      max-height: 500px;
+         background: ;: 1px solid rgba(255, 255, 255, 0.2) !important;
+      
+    }
+
+    .accordion-item.active .chevron {
+      transform: rotate(180deg);
+    }
+
+    .chevron {
+      transition: transform 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .map-wrapper {
+        flex-direction: column;
+      }
+      .info-panel {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-top: 2px;
+        box-shadow: none;
+      }
+    }
+    .accordion-content {
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordion-item .accordion-content {
+  display: none;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+.location-accordion-content li {
+      font-size: 14px;
+      line-height: 1.6;
+      position: relative;
+      color: white;
+    }
+    .accordion-item {
+      background: ;: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: white ;
+}
+
+  /* Navbar Styles */
+      .custom-navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 10px 20px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .custom-navbar .custom-brand img {
+      height: 60px;
+    }
+
+    .custom-toggle {
+      display: none;
+      font-size: 24px;
+      color: #E6E8EB;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .custom-menu {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .custom-menu a {
+      text-decoration: none;
+      color: #031439;
+      font-weight: 500;
+    }
+
+    .custom-menu a:hover {
+      color: white;
+      background: #031439;
+    }
+
+    .custom-social {
+      display: flex;
+      gap: 15px;
+    }
+
+    .custom-social a {
+      color: #E6E8EB;
+      backdrop:#031439;
+        -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: #031439 ;
+  padding: 10px 20px 10px 20px;
+  border: solid #031439  2px;
+  text-decoration: none;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .custom-toggle {
+        display: block;
+      }
+
+      .custom-menu {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: 10px;
+      }
+
+      .custom-menu.active {
+        display: flex;
+      }
+
+      .custom-social {
+        justify-content: center;
+        margin-top: 10px;
+         margin-bottom: 10px;
+      }
+    }
+
+    /* Optional padding to offset navbar */
+    .page-content {
+      padding-top: 100px;
+    }
+  @media (min-width: 992px) {
+  .custom-menu {
+    gap: 30px; /* Increased spacing */
+    justify-content: center; /* Center align */
+  }
+}
+@media (max-width: 768px) {
+  .custom-menu {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+    padding-bottom: 40px; /* ✅ Extra space at the bottom */
+  }
+
+  .custom-menu.active {
+    display: flex;
+  }
+
+  
+}
+.pt-6{
+    padding-top: 3.5rem !important; 
+}
+.fa-solid, .fas {
+    font-weight: 900;
+    color: black;
+    
+}
+/* .fas:hover {*/
+/*   -webkit-border-radius: 28;*/
+/*  -moz-border-radius: 28;*/
+/*  border-radius: 28px;*/
+  
+/*  color: #fff;*/
+/*  font-size: 20px;*/
+/*  background: #031439;*/
+/*  padding: 10px 20px 10px 20px;*/
+/*  border: solid #031439  2px;*/
+/*  text-decoration: none;*/
+/*}*/
+/*.custom-social{*/
+/*color: white;*/
+/*  background: #031439;*/
+/*    border-radius: 28px;*/
+/*  text-decoration: none;*/
+/*}*/
+  </style>
+</head>
+<body>
+ <div class="sticky-top bg-white shadow py-2">
+        <div class="navbar container navbar-expand-lg navbar-light  px-4 px-md-0 ">
+            <div class="navbar-brand me-5">
+                <a href="/">
+                    <img loading="eager" src="https://mdbootstrap.com/img/Photos/new-templates/animal-shelter/logo.png" alt=" logo" class="logo rounded-1" height="40px" >
+                </a>
+            </div>
+            <button type="button" class="navbar-toggler bg-custom-gold" data-bs-toggle="collapse" aria-label="nav-btns"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse z-3 py-3 py-md-0 py-lg-0" id="navbarCollapse">
+                <div class="navbar-nav ms-auto align-items-center">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#highlights" class="nav-link">Highlights</a>
+                    <a href="#amenities" class="nav-link">Amenities</a>
+                    <a href="#price" class="nav-link">Price </a>
+                    <a href="#price" class="nav-link">Floor Plan</a>
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                    <a href="#map" class="nav-link">Map</a>
+                    <a href="#contact" class="nav-link">Contact Us</a>
+                    <div class=" nav-link d-flex align-items-center">
+                        <a href="tel:+917755990022" class=" btn btn-primary rounded-5 fs-8"><i class="fa-solid fa-phone-volume me-2 fs-8"></i>+91 7755990022</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <!--<header class="">-->
+  
+  
+<!--<header class="custom-navbar">-->
+<!--  <a href="#" class="custom-brand">-->
+<!--    <img src="https://mdbootstrap.com/img/Photos/new-templates/animal-shelter/logo.png" alt="Logo">-->
+<!--  </a>-->
+
+<!--  <button class="custom-toggle" id="toggleMenu">-->
+<!--    <i class="fas fa-bars"></i>-->
+<!--  </button>-->
+
+<!--  <nav class="custom-menu" id="customMenu">-->
+<!--    <a href="#about">About</a>-->
+<!--    <a href="#highlights">Highlights</a>-->
+<!--    <a href="#amenities">Amenities</a>-->
+<!--    <a href="#floorplan">Floor Plann</a>-->
+<!--    <a href="#gallery">Gallery</a>-->
+<!--    <a href="#education">Map</a>-->
+<!--    <a href="#about">About Developer</a>-->
+<!--    <a href="#contact">Contact</a>-->
+<!--    <div class="custom-social">-->
+<!--        <div>-->
+<!--        <a href="tel:+918600006723" class="btn  rounded-5 fs-8"><i class="fa-solid fa-phone-volume me-2 fs-9"></i>+91 8600006723</a>-->
+<!--                    </div>-->
+<!--    </div>-->
+<!--  </nav>-->
+<!--</header>-->
+
+
+<!-- Optional space to see the navbar -->
+
+      
+  <!--<div class="container">-->
+  <!--  <div class="logo">LOGO HERE</div>-->
+  <!--  <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>-->
+  <!--  <nav id="navbar">-->
+  <!--    <a href="#about" onclick="closeMenu()">About</a>-->
+  <!--    <a href="#highlight" onclick="closeMenu()">Highlights</a>-->
+  <!--    <a href="#amenities" onclick="closeMenu()">Amenities</a>-->
+  <!--    <a href="#floorplan" onclick="closeMenu()">Floor Plan</a>-->
+  <!--    <a href="#gallery" onclick="closeMenu()">Gallery</a>-->
+  <!--    <a href="#map" onclick="closeMenu()">Map</a>-->
+  <!--    <a href="#contact" onclick="closeMenu()">Contact Us</a>-->
+  <!--    <a href="tel:+917038678768" class="phone-btn .btn  fa-solid fa-phone-volume">+91 7038678768</a>-->
+  <!--  </nav>-->
+  <!--</div>-->
+  
+  
+
+
+<!--</header>-->
+
+  
+  
+  
+  <!-- Hero Section -->
+    <div class="hero-container pt-6 ">
+  <img src="https://mantra-meridian.newlaunchproject.in/images/dlf-banner.webp" alt="Hero Banner Desktop" class="hero-img d-none d-md-block w-100">
+  <img src="https://raymondrealtythane.net/MAIN%20POPUPP%201.jpg" alt="Hero Banner Mobile" class="hero-img d-block d-md-none w-100">
+</div>
+
+  <section id="about" class="about-section container section-spacing">
+    <h2 class="mb-4">About Us</h2>
+    <p class="mb-0">
+      Discover Flamante by VTP Luxe, an exquisite property strategically situated in Kharadi. Designed to cater to discerning individuals, the craft of VTP Luxe will leave you boasting with admiration and prestige.
+      <span class="collapse" id="moreText">
+        Nestled amongst the most coveted locale of Kharadi, this project boasts 6 soaring towers, with up to 33 storeys, giving you the best views of an elevated skyline and rejuvenating the affluent communities of Kharadi with its utter brilliance.
+      </span>
+    </p>
+    <a class="read-more" data-bs-toggle="collapse" href="#moreText" role="button" aria-expanded="false" aria-controls="moreText">
+      Read More
+    </a> 
+     <div>
+          <div data-url="https://picsum.photos/536/354?9"  data-target-pop="true" data-popup="#download-form"
+  class=" floorPlan btn btn-dark rounded-pill px-4 py-2 mt-3" style="background-color: #0a1d3b; border: none;">
+            Download Brochure <i class="bi bi-download ms-2"></i>
+          </div>
+        </div>
+
+  </section>
+
+  
+  
+  <section class="section-spacing highlight-section">
+   <h2 class="mb-4 container">Highlights</h2>  
+  <div class="highlight-container container">
+      
+    <div class="highlight-left my-auto">
+      
+      <div class="highlight-image">
+          <img src="https://picsum.photos/536/354?9" alt="Kitchen Interior" class="highlight-img">
+      </div>
+    </div>
+    <div class="highlight-right">
+      <ul>
+        <li><span>18</span> Projects in Development</li>
+        <li><span>50+</span> Years of Legacy</li>
+        <li><span>500</span> Acres of Prime Land</li>
+        <li><span>25+</span> Industry Awards Achieved</li>
+        <li><span>50</span> Lakh Sq. Ft. Delivered</li>
+        <li><span>17</span> Years in Real Estate</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    
+    
+<!-- Amenities --><!-- Amenities -->
+<section class="container section-spacing">
+  <h2 class="mb-4" style="color: #031439;">Amenities</h2>
+  <div class="row g-4">
+    <div class="col-12 col-md-4">
+      <img src="https://picsum.photos/400/400?random=1" class="gallery-img img-fluid  mb-3" style="height: 300px; object-fit: cover; width: 100%;" alt="Gallery">
+      <img src="https://picsum.photos/400/250?random=2" class="gallery-img img-fluid " style="height: 200px; object-fit: cover; width: 100%;" alt="Gallery">
+    </div>
+    <div class="col-12 col-md-4">
+      <img src="https://picsum.photos/400/250?random=3" class="gallery-img img-fluid mb-3" style="height: 200px; object-fit: cover; width: 100%;" alt="Gallery">
+      <img src="https://picsum.photos/400/400?random=4" class="gallery-img img-fluid " style="height: 300px; object-fit: cover; width: 100%;" alt="Gallery">
+    </div>
+    <div class="col-12 col-md-4">
+      <img src="https://picsum.photos/400/300?random=5" class="gallery-img img-fluid  mb-3" style="height: 250px; object-fit: cover; width: 100%;" alt="Gallery">
+      <img src="https://picsum.photos/400/300?random=6" class="gallery-img img-fluid " style="height: 250px; object-fit: cover; width: 100%;" alt="Gallery">
+    </div>
+  </div>
+</section>
+
+
+
+<section class="floor-plan-section">
+  <div class="container">
+    <h2 class=" mb-4" style="color: #031439;"> Floor Plan</h2>
+    <div class="floor-plan-card d-flex flex-column flex-lg-row align-items-center justify-content-between">
+      
+      <!-- Left Content -->
+      <div class="floor-plan-details col-lg-6 col-md-12">
+        <div class="bhk-buttons mb-4">
+          <button class="btn active" data-bhk="3bhk">3 BHK</button>
+          <button class="btn" data-bhk="3.5bhk">3.5 BHK</button>
+          <button class="btn" data-bhk="4bhk">4 BHK</button>
+          <button class="btn" data-bhk="4.5bhk">4.5 BHK</button>
+        </div>
+        <span id="bhk-title" style="font-size:30px; line-height: 41.4px;">2 BHK with Deck</span>
+<p id="bhk-area" style="font-size:22px; line-height: 41.4px;">2226 SQ.FT.</p>
+<p id="bhk-price" style="font-size:22px; line-height: 41.4px;">6.40 CR All Inc</p>
+       
+       
+        <a data-url="https://picsum.photos/536/354?9" data-target-pop="true" data-popup="#download-form" class="floorPlan btn btn-download  btn-lg">
+          Download Floor Plan <i class="bi bi-download"></i>
+        </a>
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-lg-6 col-md-12">
+        <img id="floor-image" src="images/FloorPlanjpeg" alt="Floor Plan" class="plan-img" />
+      </div>
+    </div>
+  </div>
+</section>
+  
+  <div class="gallery-container section-spacing">
+    <div class="container position-relative">
+      <h2 class="mb-4">Gallery</h2> 
+
+      <!-- Navigation Arrows -->
+      <button class="nav-button nav-prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="nav-button nav-next" onclick="moveSlide(1)">&#10095;</button>
+
+      <div class="slider-wrapper">
+        <div class="slide-group" id="slideGroup">
+          <div class="slide">
+            <div class="image-card">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c" alt="Collaborative Space" />
+              <div class="image-overlay">
+                <h2 class="image-title">Collaborative Space</h2>
+              </div>
+            </div>
+            <div class="image-card">
+              <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da" alt="Executive Wing" />
+              <div class="image-overlay">
+                <h2 class="image-title">Executive Wing</h2>
+              </div>
+            </div>
+            <div class="image-card">
+              <img src="https://images.unsplash.com/photo-1497366412874-3415097a27e7" alt="Welcome Area" />
+              <div class="image-overlay">
+                <h2 class="image-title">Welcome Area</h2>
+              </div>
+            </div>
+            <div class="image-card">
+              <img src="https://images.unsplash.com/photo-1598928506312-6c69de9c7118" alt="Studio Room" />
+              <div class="image-overlay">
+                <h2 class="image-title">Studio Room</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dot-indicators" id="dotIndicators">
+        <!-- Dots will be injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+
+ <!-- Location Section -->
+  <div class="container">
+      <div class="location-container section-spacing container">
+     <h2 class="mb-4">Location</h2>
+    <div class="map-wrapper">
+      <img src="images/Meridna-map image-location .jpeg" alt="Location Map" class="map-image" />
+      <div class="info-panel">
+        <div class="accordion">
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              Retail
+              <span class="chevron">⌃</span>
+            </div>
+            <div class="accordion-content">
+              <ul>
+                <li>Kanakia International School</li>
+                <li>Viviana Mall - 20 Mtrs</li>
+                <li>Korum Mall - 1 Km</li>
+                <li>R Mall (Thane) - 5 Kms</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              Entertainment & Recreation
+              <span class="chevron">⌃</span>
+            </div>
+            <div class="accordion-content">
+              <ul>
+                <li>ISCON Center</li>
+                <li>Winning Steak Club</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              Health Care
+              <span class="chevron">⌃</span>
+            </div>
+            <div class="accordion-content">
+              <ul>
+                <li>Sharvari Hospital</li>
+                <li>SMC Pvt. Hospital</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              Connectivity
+              <span class="chevron">⌃</span>
+            </div>
+            <div class="accordion-content">
+              <ul>
+                <li>Eastern Express Highway</li>
+                <li>Thane Railway Station</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              Education
+              <span class="chevron">⌃</span>
+            </div>
+            <div class="accordion-content">
+              <ul>
+                <li>Billabong High School</li>
+                <li>Hiranandani Foundation School</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+
+
+
+ <!-- About Developer Section -->
+  <section class="section-container">
+    <div class="container">
+      <!--<h1 class="section-title mb-4">About Developer</h1> -->
+      <h2 class="mb-4">About Developer</h2>
+      <p class="about-description">
+        Discover Flamante by VTP Luxe, an exquisite property strategically situated in Kharadi. Designed to cater to discerning individuals, the craft of VTP Luxe will leave you boasting with admiration and prestige. 
+        <span id="more-text" style="display: none;">
+          Nestled amongst the most coveted locale of Kharadi, this project boasts 6 soaring towers, with up to 33 storeys, giving you the best views of an elevated skyline and rejuvenating the affluent communities of Kharadi with its utter brilliance.
+        </span>
+      </p>
+      <a href="javascript:void(0);" class="read-more" id="toggleBtn" onclick="toggleReadMore()">Read More</a>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <!--<h1 class="section-title">Contact Us</h1>-->
+           <h2 class="mb-4">Contact Us</h2>
+          <p class="contact-description">
+            Discover Flamante by VTP Luxe, an exquisite property strategically situated in Kharadi. Designed to cater to discerning individuals, the craft of VTP Luxe will leave you boasting with admiration and prestige. Nestled amongst the most coveted locale.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <div class="contact-form">
+            <!--<h2 class="form-title"></h2>-->
+            <h2 class="mb-0" style="font-size:22px!important;">Get in touch</h2>
+            <form>
+              <input type="text" name="name" class=" w-100 my-2 bg-transparent custom-input"   placeholder="Your Name" required>
+              <input type="text" name="phone" class=" w-100 my-3 bg-transparent  custom-input" placeholder="Mobile no / Email Id" required>
+              <button type="submit" class="submit-btn rounded-pill p-2 fw-normal">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer Section -->
+  <footer class="footer-wrapper section-spacing">
+    <div class="footer-top">
+      <div class="footer-logo-box">
+        <div>LOGO HERE</div>
+        <img src="your-qr-code.png" alt="QR Code" />
+      </div>
+      <div class="footer-disclaimer">
+        Ahgysuhijk At Balewadi, Pune By Rohan Builders registered with P52100052298<br>
+        <strong>Disclaimer:</strong> Any content mentioned in this website is for information small purpose only and Prices are subject to change without notice.
+        This website is just for the purpose of information only and not to be considered as an official website.
+        This is Official Site of its Authorized Marketing Partner with Rohan Ekam and RERA.A52100022646.
+        We may share data with RERA registered brokers/companies for further processing.
+        We may also send updates to the mobile number/email id registered with us.
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2020 DevDNA. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Sitemap</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Read More Toggle Script -->
+  <script>
+    function toggleReadMore() {
+      const moreText = document.getElementById("more-text");
+      const toggleBtn = document.getElementById("toggleBtn");
+
+      if (moreText.style.display === "none") {
+        moreText.style.display = "inline";
+        toggleBtn.textContent = "Read Less";
+      } else {
+        moreText.style.display = "none";
+        toggleBtn.textContent = "Read More";
+      }
+    }
+  </script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // function toggleMenu() {
+    //   document.getElementById('navbar').classList.toggle('active');
+    // }
+
+    // function closeMenu() {
+    //   if (window.innerWidth <= 768) {
+    //     document.getElementById('navbar').classList.remove('active');
+    //   }
+    // }
+
+    function togglePlan(type) {
+      const buttons = document.querySelectorAll('.floorplan-options button');
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      switch (type) {
+        case '2bhk':
+          document.getElementById('plan-title').innerText = '2 BHK with Deck';
+          document.getElementById('plan-image').src = 'https://via.placeholder.com/400x250';
+          break;
+        case '3bhk':
+          document.getElementById('plan-title').innerText = '3.5 BHK Premium';
+          document.getElementById('plan-image').src = 'https://via.placeholder.com/400x250?text=3.5+BHK';
+          break;
+        case '4bhk':
+          document.getElementById('plan-title').innerText = '4 BHK Elite';
+          document.getElementById('plan-image').src = 'https://via.placeholder.com/400x250?text=4+BHK';
+          break;
+        case '4.5bhk':
+          document.getElementById('plan-title').innerText = '4.5 BHK Grand';
+          document.getElementById('plan-image').src = 'https://via.placeholder.com/400x250?text=4.5+BHK';
+          break;
+      }
+
+      const clickedBtn = Array.from(buttons).find(btn => btn.innerText.includes(type.replace('bhk', '')));
+      if (clickedBtn) clickedBtn.classList.add('active');
+    }
+  </script>
+  
+  
+<!-- WORKING Collapse on nav link click -->
+<script>
+//   window.addEventListener('scroll', function () {
+//     const navbar = document.querySelector('.floorPlanbtn');
+//     if (window.scrollY > 50) {
+//       navbar.classList.add('scrolled');
+//     } else {
+//       navbar.classList.remove('scrolled');
+//     }
+//   });
+</script>
+  
+  <script>
+    const slideGroup = document.getElementById("slideGroup");
+    const slideRow = slideGroup.querySelector(".slide");
+    const totalImages = slideRow.children.length;
+    let currentIndex = 0;
+
+    function getImagesPerSlide() {
+      return window.innerWidth <= 768 ? 1 : 3;
+    }
+
+    function updateSlider() {
+      const imagesPerSlide = getImagesPerSlide();
+      const cardWidth = slideRow.children[0].offsetWidth + 16; // 16 = approx. margin
+      slideGroup.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+      updateDots();
+    }
+
+    function moveSlide(direction) {
+      const imagesPerSlide = getImagesPerSlide();
+      const maxIndex = totalImages - imagesPerSlide;
+      currentIndex = Math.min(Math.max(currentIndex + direction, 0), maxIndex);
+      updateSlider();
+    }
+
+    function updateDots() {
+      const dotContainer = document.getElementById("dotIndicators");
+      const imagesPerSlide = getImagesPerSlide();
+      const totalDots = Math.ceil(totalImages / imagesPerSlide);
+
+      dotContainer.innerHTML = '';
+      for (let i = 0; i < totalDots; i++) {
+        const dot = document.createElement("button");
+        dot.className = "dot" + (i === Math.floor(currentIndex / imagesPerSlide) ? " active" : "");
+        dot.addEventListener("click", () => {
+          currentIndex = i * imagesPerSlide;
+          updateSlider();
+        });
+        dotContainer.appendChild(dot);
+      }
+    }
+
+    window.addEventListener("resize", () => {
+      updateSlider();
+    });
+
+    window.addEventListener("load", () => {
+      updateSlider();
+    });
+  </script>
+  
+<script>
+  const bhkData = {
+    "3bhk": {
+      title: "3 BHK with Deck",
+      area: "2226 SQ.FT.",
+      price: "6.40 CR All Inc",
+      img: "https://i.imgur.com/3Q8mMKk.jpg"
+    },
+    "3.5bhk": {
+      title: "3.5 BHK Premium",
+      area: "2600 SQ.FT.",
+      price: "7.80 CR All Inc",
+      img: "https://i.imgur.com/1Zq3cSC.jpg"
+    },
+    "4bhk": {
+      title: "4 BHK Ultra Luxe",
+      area: "3200 SQ.FT.",
+      price: "9.50 CR All Inc",
+      img: "https://i.imgur.com/0dM5ArZ.jpg"
+    },
+    "4.5bhk": {
+      title: "4.5 BHK Sky Villa",
+      area: "3800 SQ.FT.",
+      price: "12.75 CR All Inc",
+      img: "https://i.imgur.com/w2uJPCG.jpg"
+    }
+  };
+
+  const buttons = document.querySelectorAll('.bhk-buttons .btn');
+  const title = document.getElementById('bhk-title');
+  const area = document.getElementById('bhk-area');
+  const price = document.getElementById('bhk-price');
+  const img = document.getElementById('floor-image');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const bhk = btn.dataset.bhk;
+      const data = bhkData[bhk];
+      title.textContent = data.title;
+      area.textContent = data.area;
+      price.textContent = data.price;
+      img.src = data.img;
+    });
+  });
+</script>
+
+
+<script>
+  const headers = document.querySelectorAll('.accordion-header');
+
+  headers.forEach(header => {
+    header.addEventListener('click', () => {
+      const currentItem = header.parentElement;
+      const isActive = currentItem.classList.contains('active');
+
+      // Close all items
+      document.querySelectorAll('.accordion-item').forEach(item => item.classList.remove('active'));
+
+      // Re-open the clicked one if it wasn't already active
+      if (!isActive) {
+        currentItem.classList.add('active');
+      }
+    });
+  });
+</script>
+
+
+<script>
+  // Get all accordion headers
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+  // Loop through each header
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', function() {
+      // Get the associated accordion content
+      const content = this.nextElementSibling;
+
+      // Toggle the display of the accordion content
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+
+      // Toggle the chevron rotation
+      const chevron = this.querySelector('.chevron');
+      chevron.classList.toggle('open');
+    });
+  });
+</script>
+
+<!--<script>-->
+<!--  function toggleMenu() {-->
+<!--    const nav = document.getElementById("nav");-->
+<!--    nav.classList.toggle("nav-open");-->
+<!--    nav.classList.toggle("nav-closed");-->
+<!--  }-->
+
+<!--  function closeMenu() {-->
+<!--    const nav = document.getElementById("nav");-->
+<!--    nav.classList.remove("nav-open");-->
+<!--    nav.classList.add("nav-closed");-->
+<!--  }-->
+<!--</script>-->
+// <script>
+//   document.addEventListener("DOMContentLoaded", function () {
+//     const navLinks = document.querySelectorAll(".nav-link");
+//     const navbarCollapse = document.getElementById("navbarNav");
+
+//     navLinks.forEach(link => {
+//       link.addEventListener("click", () => {
+//         // Only collapse if it's open
+//         if (window.getComputedStyle(navbarCollapse).display !== "none") {
+//           new bootstrap.Collapse(navbarCollapse, {
+//             toggle: true
+//           }).hide();
+//         }
+//       });
+//     });
+//   });
+// </script>
+<script>
+//   const toggleBtn = document.getElementById('toggleMenu');
+//   const menu = document.getElementById('customMenu');
+
+//   toggleBtn.addEventListener('click', () => {
+//     menu.classList.toggle('active');
+//   });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script defer="" src="https://cdn.urbanpillar.info/js/validation-v4.js?yug" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function(){
+        $('body').popupCreate({ logo: { url: 'https://picsum.photos/536/354?9', alt: false, height: '30px', width: 'auto', }, banner: { url: '/images/FloorPlan.jpeg', alt: false, }, download: { url: '/images/FloorPlan.jpeg', alt: false, }, title: 'Mantra Meridian', area: 'Pune', returns: '/thankyou.html', phone: 8600006723, whatsAppMessage: "Hi! I'm interested in Mantra Meridian Balewadi Pune Project. Please share the details of the project.", whatsIcon: true, phoneIcon: true, offerTag: true, offerTagName: 'EXCITING OFFERS!!' });
+    });
+    </script>
+            
+</html>
+mantrameridianbalewadi index.html
+Displaying mantrameridianbalewadi index.html.
